@@ -32,14 +32,6 @@ def home():
                    "De pinga hay que Apelar")
         return "De pinga hay que APELAR"
      elif response.text.__contains__("En traitement"):
-      port = 465  # For SSL
-      context = ssl.create_default_context()
-      with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
-            server.login("cristiansori2@gmail.com", "cryipomrjfssklkf")
-            server.sendmail("cristiansori2@gmail.com",
-                   "shaniafiallo@gmail.com",
-                   "probando",
-                   "probando")
       time.sleep(60.0 - ((time.time() - starttime) % 60.0)) 
     return "ERROR"
 home()
