@@ -6,7 +6,6 @@ import smtplib
 app = flask.Flask(__name__)
 app.config["DEBUG"] = False
 starttime = time.time()
-
 @app.route('/', methods=['GET'])
 def home():
     while True:
@@ -35,3 +34,4 @@ def home():
      elif response.text.__contains__("En traitement"):
         time.sleep(60.0 - ((time.time() - starttime) % 60.0)) 
     return "ERROR"
+home()
