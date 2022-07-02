@@ -30,11 +30,23 @@ def job_function():
                    "shaniafiallo@gmail.com",
                    "APELAR",
                    "De pinga hay que Apelar")
+        cron.pause()
+        job.remove()
         return "De pinga hay que APELAR"
+    elif response.text.__contains__("Octroi du visa sur production"):
+        port = 465  # For SSL
+        context = ssl.create_default_context()
+        with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
+            server.login("cristiansori2@gmail.com", "cryipomrjfssklkf")
+            server.sendmail("cristiansori2@gmail.com",
+                   "shaniafiallo@gmail.com",
+                   "SIIIIIIII",
+                   "Nos fuimos pa belgica pingaaaaaaaa pero hay que presentar papeles,pero no importaaaaaaaaa.")
+        return "NOS FUIMOS PA BELGICA PINGAAAAAA"
     elif response.text.__contains__("En traitement"):
       return "sdd"
 app.config["DEBUG"] = False
-job = cron.add_job(job_function, 'interval', minutes=1)
+job = cron.add_job(job_function, 'interval', minutes=5)
 cron.start()
 job.resume()
 
