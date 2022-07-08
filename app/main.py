@@ -27,7 +27,7 @@ def job_function():
         with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
             server.login("cristiansori2@gmail.com", "cryipomrjfssklkf")
             server.sendmail("cristiansori2@gmail.com",
-                   "shaniafiallo@gmail.com",
+                   "cristiansori2@gmail.com",
                    "APELAR",
                    "De pinga hay que Apelar")
         cron.pause()

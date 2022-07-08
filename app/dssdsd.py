@@ -2,10 +2,11 @@ from turtle import st
 import flask
 import requests
 import requests, ssl
-contador=16000
+contador=17000
 accord=0
+tratamiento=0
 rejet=0
-while contador<18125:
+while contador<18000:
     url = 'https://infovisa.ibz.be/ResultFr.aspx?place=HAV&visumnr='+str(contador)
     response = requests.get(url)
     if response.text.__contains__("ACCORD"):
